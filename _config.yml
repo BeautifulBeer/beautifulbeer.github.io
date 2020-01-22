@@ -1,24 +1,77 @@
-title:              BeautifulBeer
-email:              dbsrhksdnd@gmail.com
-description:        Problem is not a problem anymore when we together
-author:             Kwanwoong Yoon
-baseurl:            "/"
-url:                "https://beautifulbeer.github.io"
+# Site Settings
+title: BeautifulBeer
+tagline: Bulma Clean Theme
+email: dbsrhksdnd@gmail.com
+description: >
+  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+baseurl: "/"
+url: "https://beautifulbeer.github.io"
+permalink: pretty
+theme: bulma-clean-theme
+#favicon: /path/to/favicon.png
 
-# Social Profiles
-twitter_username:   
-github_username:    BeautifulBeer
-facebook_username:  
-linkedin_username:
+paginate: 5
+paginate_path: "/blog/page:num"
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: csrhymes
 
-# Build settings
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
+
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown
+  - rouge
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+#google_analytics: UA-code-here
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: example_footer_menu
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
