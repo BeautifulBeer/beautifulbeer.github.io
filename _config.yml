@@ -4,12 +4,12 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: 코딩을 모르는 사나이
+subtitle: 하지만 잘하고는 싶은
+description: 
+author: 윤관웅
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: ko
 date_format: '%Y-%m-%d'
 
 # URL
@@ -406,7 +406,7 @@ wildfire:
   wilddog: # your wilddog config goes here ↓
     siteId:
   # other configs
-  theme: light # or dark
+  theme: next # or dark
   locale: en # or other locales, e.g. zh-CN
   defaultAvatarURL: 
 # Any question? 
